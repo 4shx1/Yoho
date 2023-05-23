@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+.container {
+  position: fixed;
+  left: 0%;
+  top: 5%;
+}
+/* Navbar styles */
+nav {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+li {
+  padding: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 8px 12px;
+}
+
+.wrap {
+  display: inline-block;
+}
+#cright {
+  position: absolute;
+  /* top: 1.5%; */
+  margin-left: 75%;
+}
+.my-chart {
+  margin-top: 5%;
+
+}
+
+/* Card styles */
+.card {
+  background-color: #f2f2f2;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(5 / 9 * 100vw);
+  height: calc(3 / 9 * 100vw);
+  position: relative;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 4%;
+  right: 1%;
+  padding: 8px;
+}
+
+.dropdown select {
+  font-size: 16px;
+  padding: 8px;
+}
+
+table,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-collapse: collapse;
+}
+
+/* Table Styling */
+table {
+  width: calc(5 / 9 * 100vw);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+caption {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+thead th {
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody td {
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Padding and Borders for Table Cells */
+th,
+td {
+  padding: 8px;
+  border: none;
+}
+
+/* news style */
+
+#news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0%;
+  top: 5%;
+}
+#news {
+  position: relative;
+  right: 25%;
+  font-size: 40px;
+}
+
+.news-article {
+  width: 80%;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.news-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.news-author {
+  font-size: 0.8rem;
+  color: gray;
+  margin-bottom: 0.5rem;
+}
+
+.news-description {
+  font-size: 1rem;
+}

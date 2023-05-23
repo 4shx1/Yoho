@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoho</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div style="color: #fff; font-size: 32px">Yoho</div>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/chart.html">Charts</a></li>
+        <li><a href="/news.html">News</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <!-- title -->
+      <h2 style="font-size: 40px; margin-left: 20px">Stock Name</h2>
+
+      <div class="dropdown">
+        <select>
+          <option value="">Select stock</option>
+          <option value="stock1">Stock 1</option>
+          <option value="stock2">Stock 2</option>
+          <option value="stock3">Stock 3</option>
+          <option value="stock4">Stock 4</option>
+          <option value="stock5">Stock 5</option>
+        </select>
+      </div>
+
+      <!-- Card -->
+      <div class="card">
+       
+        <div class="wrap">
+          <h2>102.3 $</h2>
+          <p>Predicted close price</p>
+        </div>
+        <div class="wrap" id="cright">
+          <h2>102.1 $</h2>
+          <p>Actual close price</p>
+        </div>
+
+        <!-- Chart -->
+
+        <div class="my-chart">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <script>
+          const ctx = document.getElementById("myChart");
+
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: ["Date1", "Date2", "Date3", "Date4", "Date5", "Date6"],
+              datasets: [
+                {
+                  label: "Predicted Close Price",
+                  data: [100, 95, 105, 110, 98, 101],
+                  borderWidth: 1,
+                },
+                {
+                  label: "Actual Close Price",
+                  data: [102, 98, 100, 105, 99, 103],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: false,
+                },
+              },
+            },
+          });
+        </script>
+      </div>
+
+      <!-- Table -->
+      <table>
+        <caption>
+          Stock OHLC Values
+        </caption>
+        <thead>
+          <tr>
+            <th>date</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>day 1</td>
+            <td>100.00</td>
+            <td>105.50</td>
+            <td>98.75</td>
+            <td>102.80</td>
+          </tr>
+          <tr>
+            <td>day 2</td>
+            <td>50.25</td>
+            <td>52.40</td>
+            <td>48.90</td>
+            <td>51.15</td>
+          </tr>
+          <tr>
+            <td>day 3</td>
+            <td>75.80</td>
+            <td>78.90</td>
+            <td>72.50</td>
+            <td>76.20</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+    <!-- News Section -->
+
+    <div id="news-container">
+      <h2 id="news">Stock News</h2>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

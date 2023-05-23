@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="chart.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Live Prices</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div style="color: #fff; font-size: 32px">Yoho</div>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/chart.html">Charts</a></li>
+        <li><a href="/news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <!-- Card -->
+    <div class="container">
+      <div class="card" style>
+        <h2>BANK NIFTY</h2>
+        
+        <div class="wrap">
+          <h2 style="margin-top: 20px;">102.1 $</h2>
+          <p>current price</p>
+        </div>
+
+        <!-- Chart -->
+
+        <div class="my-chart">
+          <canvas id="myChart"></canvas>
+        </div>
+
+        <script>
+          const ctx = document.getElementById("myChart");
+
+          new Chart(ctx, {
+            type: "line",
+            data: {
+              labels: ["Date1", "Date2", "Date3", "Date4", "Date5", "Date6"],
+              datasets: [
+                {
+                  label: "Predicted Close Price",
+                  data: [100, 95, 105, 110, 98, 101],
+                  borderWidth: 1,
+                },
+                {
+                  label: "Actual Close Price",
+                  data: [102, 98, 100, 105, 99, 103],
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: false,
+                },
+              },
+            },
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

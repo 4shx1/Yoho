@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+.container {
+  margin-left: 30px;
+  margin-top: 30px;
+  position: fixed;
+  left: 0%;
+  top: 5%;
+}
+/* Navbar styles */
+nav {
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+li {
+  padding: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 8px 12px;
+}
+
+.wrap {
+  display: inline-block;
+}
+
+#cright {
+  position: absolute;
+  /* top: 1.5%; */
+  margin-left: 75%;
+}
+.my-chart {
+  margin-top: 5%;
+}
+
+/* Card styles */
+.card {
+  background-color: #f2f2f2;
+  padding: 8px; /* Update padding to decrease card size */
+  margin: 8px; /* Update margin to decrease card size */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(3 / 9 * 100vw); /* Update card width to be smaller */
+  height: calc(2 / 9 * 100vw); /* Update card height to be smaller */
+  position: relative;
+}
+
+.card h2 {
+  font-size: 18px; /* Update font size to be smaller */
+  margin: 0;
+  margin-bottom: 4px; /* Update margin bottom to be smaller */
+}
+
+.card p {
+  font-size: 14px; /* Update font size to be smaller */
+  color: #666;
+  margin: 0;
+}
+
+.my-chart {
+  margin-top: 3%; /* Update margin top to be smaller */
+  width: 100%; /* Set chart width to 100% of parent element */
+  height: 70%; /* Set chart height to 70% of parent element */
+}
